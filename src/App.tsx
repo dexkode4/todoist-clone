@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
+import { Content } from './Components/Layout/Content/Content';
+import Header from './Components/Layout/Header/Header';
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      APP
+    <div>
+      <Header />
+      <Content />
     </div>
   );
 }
 
-export default App;
