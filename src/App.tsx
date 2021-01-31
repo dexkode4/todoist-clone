@@ -1,14 +1,15 @@
 import React from 'react';
-import './App.css';
 import { Content } from './Components/Layout/Content/Content';
 import Header from './Components/Layout/Header/Header';
-
+import { ProjectContextProvider, SelectedProjectContextProvider } from './context'
 export const App = () => {
   return (
-    <div>
-      <Header />
-      <Content />
-    </div>
+    <SelectedProjectContextProvider>
+      <ProjectContextProvider>
+        <Header />
+        <Content />
+      </ProjectContextProvider>
+    </SelectedProjectContextProvider>
   );
 }
 
